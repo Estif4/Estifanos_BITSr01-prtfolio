@@ -1,0 +1,591 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    color: #9b9cbe;
+    margin: 30px 0;
+    border-bottom: 2px solid transparent;
+    transition: background-color 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+h4:hover {
+    background-color: #6b61f7;
+}
+
+.stack-img:hover {
+    transform: rotate(180deg);
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #0b0303;
+    background-color: #262826;
+    line-height: 1.6;
+    overflow-y: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 35px;
+    border-radius: 20px;
+    height: 30px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    transition: color 0.0001s ease, border 0.001s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 0, 0);
+    border-bottom-style: solid;
+    border-color: rgb(243, 241, 242);
+    padding-bottom: 20px;
+}
+
+.profile-info {
+    background-image: url(background_image/backimg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    height: 900px;
+    color: white;
+    border-radius: 5px;
+}
+
+.profile-img {
+    width: 80%;
+    height: 650px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 52px 45px 40px rgba(9, 63, 244, 0.3);
+    transition: transform 0.3s ease;
+    animation: moveToLeftRight 10s;
+    float: right;
+    margin-top: 10%;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    animation-play-state: paused;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+    color: #eff4ef;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.foot {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 15px;
+    padding: 10px;
+    height: 150px;
+    align-items: center;
+    color: white;
+    background: linear-gradient(to right, #2e2020, #282844);
+}
+
+.foot img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    margin-right: 25px;
+}
+
+.foot img:hover {
+    transform: scale(1.1);
+}
+
+.foot div img {
+    background-color: #0077b6;
+}
+
+.skills {
+    display: flex;
+    column-gap: 10%;
+}
+
+.skills img {
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+}
+
+.skills p {
+    font-size: 14px;
+}
+
+.dark-mode * {
+    color: #fff;
+    background-color: #444;
+}
+
+.dark-mode .profile-info,
+.dark-mode .foot,
+.dark-mode .nav,
+.dark-mode .bio-content,
+.dark-mode .edu-content,
+.dark-mode body,
+.dark-mode .header {
+    background: #443;
+}
+
+#dark-mode-toggle {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.dark {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.dark:hover {
+    box-shadow: 5px 5px 5px gray;
+}
+
+.skills img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes moveToLeftRight {
+    0% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+.stack-img {
+    width: 20%;
+    height: 55px;
+    background: linear-gradient(to right, #f3edef, #6f6fe5);
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.topleft {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5%;
+}
+
+.whoiamandphoto {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+}
+
+.header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    z-index: 10;
+    background-color: rgb(111, 111, 249);
+    width: 100%;
+    height: 10%;
+}
+
+.decorate {
+    height: 700px;
+    border-radius: 600px;
+    width: 50%;
+    background-color: rgb(60, 109, 195);
+    margin-left: -450px;
+    margin-top: 10px;
+}
+
+svg {
+    animation: movedown 20s ease-in-out infinite;
+}
+
+@keyframes movedown {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(30px);
+    }
+    75% {
+        opacity: 0.25;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}
+
+.bio-content {
+    display: flex;
+    border-radius: 15px;
+    background-color: hsl(210, 10%, 20%);
+    height: 1100px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.3s ease-in-out 0.4s, transform 0.4s ease-in-out 0.4s;
+    color: white;
+    padding: 40px;
+}
+
+.bio-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.edu-content h2{
+    margin-left:40%;
+    margin-bottom:30px;
+    color:black;
+}
+.edu-content h3{
+    margin-left:20%;
+    margin-top:30px;
+    color:rgb(255, 255, 255);
+}
+.edu-content {
+    
+    
+    background:url(school.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(5px); 
+    height: 1000px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.3s ease-in-out 0.3s, transform 0.3s ease-in-out 0.3s;
+    color: rgb(255, 255, 255);
+}
+.edu{
+    display:flex;
+    
+   background-color: #262826;
+  border-radius:10px;
+    
+}
+.edu p{
+    
+    padding:25px;
+}
+.edu-back{
+    background-color: #9b9cbe;
+  
+    
+}
+
+.edu-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.whoiam {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 70px;
+    margin-top: 14%;
+    border-radius: 10px;
+    animation: fortoright 1s ease-in-out;
+    box-shadow: 15px -15px 20px 15px rgb(3, 45, 79);
+    margin-left: 20%;
+}
+
+@keyframes fortoright {
+    0% {
+        transform: translateX(-900px);
+    }
+}
+
+.whoiam h2 {
+    animation: fortodown 3s ease-in-out;
+    color: rgb(234, 222, 222);
+    padding: 10px;
+    margin-top: -55px;
+}
+
+.whoiam p {
+    animation: fortop2toright 3s ease-in-out;
+    color: #e4e4ef;
+    font-size: 18px;
+}
+
+@keyframes fortop2toright {
+    0% {
+        transform: translateX(2000px);
+    }
+}
+
+@keyframes fortodown {
+    0% {
+        transform: translateY(-400px);
+    }
+}
+
+.whoiam .skills img {
+    animation: fortoskillstoright 3s ease-in-out;
+    margin-top: 35px;
+}
+
+@keyframes fortoskillstoright {
+    0% {
+        transform: translateX(2000px);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 768px) {
+    .profile-img {
+        width: 150px;
+        height: 500px;
+        margin-top: 80px;
+
+    }
+    
+ 
+
+.bio-paragraph p {
+    font-size: 12px;
+    padding:0px;
+    
+}
+
+.real-world-projects img {
+    width: 300px;
+    height: 400px;
+}
+.real-world-projects h2 {
+    font-size:16px;
+}
+.real-world-projects a {
+    white-space: nowrap;
+    font-size:10px;
+}
+   
+       
+        nav ul li {
+    margin-right:10px;
+
+}
+nav{
+    margin-right:160px;
+}
+    
+   
+    body {
+        height: 500px;
+    }
+    .topleft {
+        margin-left: 35px;
+    }
+    .foot {
+        height: 250px;
+        margin-top: 100px;
+    }
+    .whoiam {
+        margin-left: 350px;
+        font-size: 15px;
+        padding: 0;
+        margin-top: 215px;
+        white-space: wrap;
+        width: 150px;
+        box-shadow: none;
+    }
+    .header{
+       height:75px;
+    }
+    .primary-school p,
+    .secondary-school p,
+    .higher-edu p{
+        font-size:9px;
+    }
+    .primary-school h3,
+    .secondary-school h3,
+    .higher-edu h3{
+        font-size: 12px;
+    }
+    .real-world-projects img {
+    width: 100px;
+    height: 100px;
+}   .skills img {
+        height: 25px;
+        width: 25px;
+        column-gap: 10px;
+    }
+    .skills {
+        display: flex;
+        column-gap: 10px;
+        width: 55px;
+        margin-right: 10px;
+    }
+    .profile-info{
+        width:auto;
+    }
+    .bio-content {
+        padding: 15px;
+    }
+    .edu-content {
+        height: 1200px;
+        margin-bottom: -100px;
+        margin-top:10px;
+        
+    }
+    .edu p{
+        padding:5px;
+    }
+    .edu-content h2{
+        white-space: nowrap;
+       margin-left:15%;
+       }
+
+    .whoiam p {
+        font-size: 18px;
+    }
+    .topleft h4 {
+        white-space: nowrap;
+        width: 0px;
+        opacity: 0;
+    }
+    .stack-img {
+        width: 40px;
+        margin-left: -30px;
+        margin-top:5px;
+    }
+    
+}
+@media only screen and (min-width: 768px){
+    .bio-paragraph p {
+    font-size: 20px;
+    padding:0px;
+    
+}
+
+.real-world-projects img {
+    width: 250px;
+    height: 300px;
+    
+}
+.real-world-projects h2 {
+    font-size:16px;
+}
+.real-world-projects a {
+    white-space: nowrap;
+    font-size:15px;
+}
+}
+.real-world-projects {
+    
+    display: grid;
+    row-gap: 10px;
+    flex: 1;
+}
+.bio-content{
+   
+}
+
+
+.bio-paragraph {
+    flex: 1.2;
+    color: rgb(254, 250, 250);
+    border-radius: 10px;
+    padding: 5%;
+    margin-right: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+.real-world-projects a {
+    white-space: nowrap;
+    font-size:10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: inline;
+    width: 35%;
+}
+
+a:hover {
+    color: red;
+}
+
+.edu-content {
+    padding: 5%;
+}
+.higher-edu{
+    color:white;
+
+}
+.secondary-school{
+    color:rgb(255, 255, 255);
+}
+.primary-school{
+    color:#ffffff;
+}
