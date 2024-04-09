@@ -68,6 +68,7 @@ nav ul li a:hover {
 
 .profile-info {
     background-image: url(background_image/backimg.jpeg);
+  filter:brightness(1.2);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
